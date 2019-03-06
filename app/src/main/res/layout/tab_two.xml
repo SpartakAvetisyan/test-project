@@ -18,20 +18,15 @@
         app:srcCompat="@drawable/img_1" />
 
     <ImageView
-        android:id="@+id/post_item_user_image"
+        android:id="@+id/user_image"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="108dp"
         android:scaleType="centerCrop"
         android:src="@drawable/user_avatar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/home_background" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
@@ -41,11 +36,13 @@
         android:layout_marginTop="124dp"
         android:layout_marginRight="8dp"
         android:text="Username"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toEndOf="@+id/post_item_user_image"
+        app:layout_constraintStart_toEndOf="@+id/user_image"
         app:layout_constraintTop_toTopOf="@+id/home_background" />
 
     <TextView
@@ -58,9 +55,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Category"
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/post_item_user_image"
+        app:layout_constraintStart_toEndOf="@+id/user_image"
         app:layout_constraintTop_toBottomOf="@+id/home_background" />
 
     <TextView
@@ -71,10 +70,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Subcategory"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/post_item_user_image"
+        app:layout_constraintStart_toEndOf="@+id/user_image"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <ImageView
@@ -98,8 +99,8 @@
         android:background="@drawable/edit_photo_background"
         android:padding="6dp"
         android:src="@drawable/ic_photo"
-        app:layout_constraintBottom_toBottomOf="@+id/post_item_user_image"
-        app:layout_constraintEnd_toEndOf="@+id/post_item_user_image" />
+        app:layout_constraintBottom_toBottomOf="@+id/user_image"
+        app:layout_constraintEnd_toEndOf="@+id/user_image" />
 
     <TextView
         android:id="@+id/textView13"
@@ -107,8 +108,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="16dp"
         android:text="Find Friends"
+        android:clickable="true"
+        android:focusable="true"
         android:textColor="#85BBFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -132,15 +135,20 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/friends_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1250"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textColor="#505263"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:text="Friends" />
         </LinearLayout>
 
@@ -157,15 +165,20 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/posts_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3201"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textColor="#505263"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:text="Posts" />
         </LinearLayout>
 
@@ -182,15 +195,20 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/photos_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4000"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textColor="#505263"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:text="Photos" />
         </LinearLayout>
 
@@ -207,18 +225,39 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/videos_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="750"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textColor="#505263"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:text="Videos" />
         </LinearLayout>
     </LinearLayout>
 
-
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/add_post_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Your post here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
