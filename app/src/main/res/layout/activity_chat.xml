@@ -20,50 +20,50 @@
         app:layout_constraintStart_toStartOf="parent">
 
 
-            <ImageView
-                android:id="@+id/photo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="6dp"
-                android:src="@drawable/ic_photo_chat" />
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:src="@drawable/ic_photo_chat" />
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_type_input_background"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/chat_type_input_background"
-                android:gravity="center_vertical">
-
-                <EditText
-                    android:id="@+id/input"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#00000000"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:maxLines="4"
-                    android:scrollbars="vertical"
-                    android:hint="Message text"
-                    android:paddingLeft="8dp"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:id="@+id/smile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_smile" />
-            </LinearLayout>
+                android:background="#00000000"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:maxLines="4"
+                android:scrollbars="vertical"
+                android:hint="Message text"
+                android:paddingLeft="8dp"
+                android:textSize="14sp" />
 
             <ImageView
-                android:id="@+id/send"
+                android:id="@+id/smile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="6dp"
-                android:src="@drawable/ic_send" />
+                android:padding="8dp"
+                android:src="@drawable/ic_smile" />
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:src="@drawable/ic_send" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
